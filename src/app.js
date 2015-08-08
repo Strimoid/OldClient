@@ -1,8 +1,9 @@
 var angular = require('angular');
 
-angular.module('app', [ 
+angular.module('app', [
+        require('angular-moment'),
         require('angular-ui-router'),
-        require('restangular-browserify')
+        require('restangular-browserify'),
     ])
     .config(require('./routes'))
     .config(function(RestangularProvider) {
@@ -17,6 +18,7 @@ angular.module('app', [
 	})
     .factory('Contents', function(Restangular) {
     	return Restangular.service('contents');
-	});
+	})
+    .filter('cdn', require('./filters/cdn'));
 
 require('./contents/index');
