@@ -1,0 +1,8 @@
+<div class="ui fluid card" ng-repeat="content in contents">
+    <div class="image" ng-if="content.thumbnail">
+        <img ng-src="{{ content.thumbnail }}">
+      </div>
+      <div class="content">
+        <a class="header">{{ content.title }}</a>
+      </div>
+</div>
