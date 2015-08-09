@@ -1,0 +1,10 @@
+.comment .spoiler {
+  display: none; }
+
+@media (min-width: 800px) {
+  .ui.sidebar {
+    visibility: visible; }
+  .pusher {
+    padding-left: 15rem; } }
+
+/*# sourceMappingURL=app.css.map */

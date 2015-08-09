@@ -6,6 +6,7 @@
     "angular": "^1.4.3",
     "angular-gettext": "^2.1.0",
     "angular-moment": "^0.10.2",
+    "angular-sanitize": "^1.4.3",
     "angular-ui-router": "^0.2.15",
     "pusher-angular": "^0.1.6",
     "restangular-browserify": "^1.5.2"
@@ -16,6 +17,8 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.0.4",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.6",
     "vinyl-buffer": "^1.0.0",

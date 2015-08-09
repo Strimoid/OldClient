@@ -1,0 +1,46 @@
+<div class="ui basic segment">
+<div class="ui comments">
+  <div class="comment" ng-repeat="entry in entries">
+    <a class="avatar">
+      <img ng-src="{{ entry.user.avatar | cdn:'avatars' }}">
+    </a>
+    <div class="content">
+      <a class="author">{{ entry.user.name }}</a>
+      <div class="metadata">
+        <span class="date" am-time-ago="entry.created_at"></span>
+      </div>
+      <div class="text" ng-bind-html="entry.text">
+      </div>
+      <div class="actions">
+        <a class="reply">Reply</a>
+      </div>
+    </div>
+    <div class="comments" ng-repeat="reply in entry.replies">
+      <div class="comment">
+        <a class="avatar">
+          <img ng-src="{{ reply.user.avatar | cdn:'avatars' }}">
+        </a>
+        <div class="content">
+          <a class="author">{{ reply.user.name }}</a>
+          <div class="metadata">
+            <span class="date" am-time-ago="reply.created_at"></span>
+          </div>
+          <div class="text" ng-bind-html="reply.text">
+          </div>
+          <div class="actions">
+            <a class="reply">Reply</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="ui reply form">
+    <div class="field">
+      <textarea></textarea>
+    </div>
+    <div class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> Add Reply
+    </div>
+  </form>
+</div>
+</div>
