@@ -1,5 +1,16 @@
 <div class="ui basic segment">
 <div class="ui comments">
+    <form class="ui reply form">
+    <div class="field">
+      <textarea style="height: 5em" rows="1"></textarea>
+    </div>
+    <div class="ui blue labeled submit icon button">
+      <i class="icon edit"></i> Add entry
+    </div>
+  </form>
+
+  <div class="ui divider"></div>
+
   <div class="comment" ng-repeat="entry in entries">
     <a class="avatar">
       <img ng-src="{{ entry.user.avatar | cdn:'avatars' }}">
@@ -15,7 +26,7 @@
         <a class="reply">Reply</a>
       </div>
     </div>
-    <div class="comments" ng-repeat="reply in entry.replies">
+    <div class="comments" ng-repeat="reply in entry.replies | limitTo: (entry.showAllReplies || -2)">
       <div class="comment">
         <a class="avatar">
           <img ng-src="{{ reply.user.avatar | cdn:'avatars' }}">
@@ -34,13 +45,5 @@
       </div>
     </div>
   </div>
-  <form class="ui reply form">
-    <div class="field">
-      <textarea></textarea>
-    </div>
-    <div class="ui blue labeled submit icon button">
-      <i class="icon edit"></i> Add Reply
-    </div>
-  </form>
 </div>
 </div>

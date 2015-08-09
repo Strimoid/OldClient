@@ -1,8 +1,15 @@
+.ui.sidebar {
+    overflow: hidden !important;
+}
+
+/*
 @media (min-width: 800px) {
     .ui.sidebar {
         visibility: visible;
+        overflow: hidden !important;
     }
     .pusher {
         padding-left: 15rem;
     }
 }
+*/

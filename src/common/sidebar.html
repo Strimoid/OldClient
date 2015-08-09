@@ -1,3 +1,4 @@
-<a class="item">
-    test
+<a class="item" ng-repeat="group in groups">
+    <img class="ui avatar image" ng-src="{{ group.avatar | cdn:'groups' }}">
+    {{ group.name }}
 </a>

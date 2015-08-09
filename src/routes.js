@@ -1,18 +1,23 @@
 module.exports = function($stateProvider, $urlRouterProvider) {
-  $urlRouterProvider
-    .otherwise('/');
   $stateProvider
     .state('contents', {
-      url: '',
-      controller: 'ContentListController',
-      templateUrl: 'src/contents/index.html'
+        url: '',
+        controller: 'ContentListController',
+        templateUrl: 'src/contents/index.html'
+    })
+    .state('content', {
+        url: '/c/{id}'
     })
     .state('entries', {
-      url: '/entries',
-      controller: 'EntryListController',
-      templateUrl: 'src/entries/index.html'
+        url: '/entries',
+        controller: 'EntryListController',
+        templateUrl: 'src/entries/index.html'
     })
     .state('comments', {
-      url: '/comments',
+        url: '/comments',
+        controller: 'CommentListController',
+        templateUrl: 'src/comments/index.html'
     })
+
+    $urlRouterProvider.otherwise('');
 };

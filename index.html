@@ -4,16 +4,25 @@
 	<meta charset="UTF-8">
 	<title>Strimoid</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
 	<link rel="stylesheet" href="semantic/dist/semantic.css">
     <link rel="stylesheet" href="dist/css/app.css">
 
 	<script src="dist/js/bundle.js"></script>
+    <script src="semantic/dist/semantic.js"></script>
 </head>
 <body>
-    <div class="ui sidebar inverted vertical menu" ng-include="'src/common/sidebar.html'">
+    <div class="ui sidebar inverted vertical menu"
+        perfect-scrollbar
+        ng-controller="SidebarController"
+        ng-include="'src/common/sidebar.html'">
     </div>
   <div class="pusher">
   	<div class="ui alternative menu">
+        <a class="item toggle-sidebar">
+            <i class="sidebar icon"></i>
+        </a>
   		<a class="item" ui-sref="contents" ui-sref-active="active">popular</a>
   		<a class="item" ui-sref="contents" ui-sref-active="active">new</a>
   		<a class="item" ui-sref="comments" ui-sref-active="active">comments</a>
